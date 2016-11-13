@@ -6,19 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>javascript 对象 | 失落</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="对象
-工厂模式1234567891011function person(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function() &amp;#123;        console.log(o.name);    &amp;#125;">
+  <meta name="description" content="创建对象的方法Object 构造函数和对象字面量
+工厂模式
+
+123456789101112function createPerson(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function() &amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript 对象">
 <meta property="og:url" content="http://yoursite.com/2016/10/22/javascript-对象/index.html">
 <meta property="og:site_name" content="失落">
-<meta property="og:description" content="对象
-工厂模式1234567891011function person(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function() &amp;#123;        console.log(o.name);    &amp;#125;">
-<meta property="og:updated_time" content="2016-10-22T10:12:38.278Z">
+<meta property="og:description" content="创建对象的方法Object 构造函数和对象字面量
+工厂模式
+
+123456789101112function createPerson(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function() &amp;#123;">
+<meta property="og:updated_time" content="2016-11-13T09:51:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript 对象">
-<meta name="twitter:description" content="对象
-工厂模式1234567891011function person(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function() &amp;#123;        console.log(o.name);    &amp;#125;">
+<meta name="twitter:description" content="创建对象的方法Object 构造函数和对象字面量
+工厂模式
+
+123456789101112function createPerson(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function() &amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="失落" type="application/atom+xml">
   
@@ -151,9 +157,29 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><ul>
-<li>工厂模式<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">person</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = name || <span class="string">'John'</span>;</div><div class="line">    o.age = age || <span class="number">18</span>;</div><div class="line">    o.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(o.name);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line">person(<span class="string">'Mary'</span>, <span class="string">'19'</span>);</div></pre></td></tr></table></figure></li>
+        <h2 id="创建对象的方法"><a href="#创建对象的方法" class="headerlink" title="创建对象的方法"></a>创建对象的方法</h2><h3 id="Object-构造函数和对象字面量"><a href="#Object-构造函数和对象字面量" class="headerlink" title="Object 构造函数和对象字面量"></a>Object 构造函数和对象字面量</h3><ul>
+<li>工厂模式</li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = name || <span class="string">'John'</span>;</div><div class="line">    o.age = age || <span class="number">18</span>;</div><div class="line">    o.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(o.name);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person1 = createPerson(<span class="string">'Mary'</span>, <span class="string">'19'</span>);</div><div class="line"><span class="keyword">var</span> person2 = createPerson(<span class="string">'Mickael Jackson'</span>, <span class="string">'30'</span>);</div></pre></td></tr></table></figure>
+<p>特点：虽然抽象了创建具体对象的过程，解决了创建多个相似对象的问题，但没有解决对象识别的问题（即怎么知道一个对象的类型）。</p>
+<ul>
+<li>构造函数模式</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">    <span class="keyword">this</span>.age = age;</div><div class="line">    <span class="keyword">this</span>.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">' is '</span> + <span class="keyword">this</span>.age + <span class="string">' years old'</span>);</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(<span class="string">'Mickael'</span>, <span class="string">'30'</span>);</div><div class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person(<span class="string">'Mary'</span>, <span class="string">'19'</span>);</div></pre></td></tr></table></figure>
+<p>与工厂模式的不同之处：</p>
+<ol>
+<li>没有显式的创建对象；</li>
+<li>直接将对象和方法赋给 this；</li>
+<li>没有 return 语句。</li>
+</ol>
+<p>特点：按照惯例，构造函数始终都应该以一个大写字母开头，主要是为了区别其他函数<br>方法：要用构造函数创建实例，必须使用 new 操作符。</p>
+<p>new 调用构造函数会经历以下 4 个步骤：</p>
+<ol>
+<li>创建一个新的对象</li>
+<li>将构造函数的作用域赋给新对象（因此this就指向新对象）</li>
+<li>执行构造函数中的代码（为这个新对象添加属性）</li>
+<li>返回新对象</li>
+</ol>
 
       
     </div>
