@@ -6,25 +6,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>javascript 对象 | 失落</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="javascript 对象创建对象的方法Object 构造函数和对象字面量
+  <meta name="description" content="创建对象的方法Object 构造函数和对象字面量
 工厂模式
 
-123456789101112function createPerson(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function()">
+123456789101112function createPerson(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function() &amp;#123;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript 对象">
 <meta property="og:url" content="http://yoursite.com/2016/10/22/javascript-对象/index.html">
 <meta property="og:site_name" content="失落">
-<meta property="og:description" content="javascript 对象创建对象的方法Object 构造函数和对象字面量
+<meta property="og:description" content="创建对象的方法Object 构造函数和对象字面量
 工厂模式
 
-123456789101112function createPerson(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function()">
-<meta property="og:updated_time" content="2017-04-03T08:59:21.000Z">
+123456789101112function createPerson(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function() &amp;#123;">
+<meta property="og:updated_time" content="2017-04-03T09:03:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript 对象">
-<meta name="twitter:description" content="javascript 对象创建对象的方法Object 构造函数和对象字面量
+<meta name="twitter:description" content="创建对象的方法Object 构造函数和对象字面量
 工厂模式
 
-123456789101112function createPerson(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function()">
+123456789101112function createPerson(name, age) &amp;#123;    var o = new Object();    o.name = name || &apos;John&apos;;    o.age = age || 18;    o.sayHello = function() &amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="失落" type="application/atom+xml">
   
@@ -157,7 +157,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="javascript-对象"><a href="#javascript-对象" class="headerlink" title="javascript 对象"></a>javascript 对象</h1><h2 id="创建对象的方法"><a href="#创建对象的方法" class="headerlink" title="创建对象的方法"></a>创建对象的方法</h2><h3 id="Object-构造函数和对象字面量"><a href="#Object-构造函数和对象字面量" class="headerlink" title="Object 构造函数和对象字面量"></a>Object 构造函数和对象字面量</h3><ul>
+        <h1 id="创建对象的方法"><a href="#创建对象的方法" class="headerlink" title="创建对象的方法"></a>创建对象的方法</h1><h2 id="Object-构造函数和对象字面量"><a href="#Object-构造函数和对象字面量" class="headerlink" title="Object 构造函数和对象字面量"></a>Object 构造函数和对象字面量</h2><ul>
 <li>工厂模式</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name, age</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    o.name = name || <span class="string">'John'</span>;</div><div class="line">    o.age = age || <span class="number">18</span>;</div><div class="line">    o.sayHello = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(o.name);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> o;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person1 = createPerson(<span class="string">'Mary'</span>, <span class="string">'19'</span>);</div><div class="line"><span class="keyword">var</span> person2 = createPerson(<span class="string">'Mickael Jackson'</span>, <span class="string">'30'</span>);</div></pre></td></tr></table></figure>
